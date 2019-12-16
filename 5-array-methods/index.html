@@ -17,7 +17,8 @@
   font-size: 1.3rem;
 }
 </style>
-<body>
+<bo
+dy>
   <div id="app"></div>
   <ul id="list"></ul>
   <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
@@ -113,9 +114,9 @@
 ////////////////////////////////////////////
     // function find
 
-  const name = inventors.find(fName => fName.first === 'Marie');
+  // const name = inventors.find(fName => fName.first === 'Marie');
 
-  console.log(name);
+  // console.log(name);
 /////////////////////////////////////////////
     // Array.prototype.map()
 // 2. Give us an array of the inventors' first and last names
@@ -127,6 +128,12 @@
 
     // console.log(fullNames);
 
+    // const onlyName = inventors.map(({first, last, year}) => {
+    //   return `${first} ${last} - ${year}`;
+    // }
+    // );
+    // console.table(onlyName);
+    
 
 ///////////////////////////////////////////////////
 
@@ -141,9 +148,9 @@
   //   }
   // });
 
-    const ordered = inventors.sort((a,b) => a.year > b.year ? 1 : -1);
-
+    // const ordered = inventors.sort((a,b) => a.year > b.year ? 1 : -1);
     // console.table(ordered); 
+
 ///////////////////////////////////////////////////
     // Array.prototype.reduce()
 // 4. How many years did all the inventors live?
@@ -156,10 +163,9 @@
     
     // console.log(totalYears);
 
-    const totalYears = inventors.reduce((total, inventor) => {
-      return total + (inventor.passed - inventor.year);
-    }, 0);
-
+    // const totalYears = inventors.reduce((total, {year, passed}) => {
+    //   return total + (passed - year);
+    // }, 0);
     // console.log(totalYears);
 
 // 5. Sort the inventors by years lived
@@ -168,8 +174,9 @@
       const lastGuy = a.passed - a.year;
       const nextGuy = b.passed - b.year;
       return lastGuy > nextGuy ? -1 : 1;
-    });
-    
+    }); 
+     
+    console.table(oldest);
      
     //   if (lastGuy > nextGuy) {
     //     return -1;
@@ -190,6 +197,15 @@
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
+     const reduceEx = data.reduce(function(obj, item) {
+       if(!obj[item]) {
+         obj[item] = 0;
+       }
+       obj[item]++;
+       return obj;
+     },{})
+     console.log(reduceEx);
+
+// bianka
   </script>
-</body>
 </html>
