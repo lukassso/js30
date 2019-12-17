@@ -1,0 +1,23 @@
+{
+  "name": "js30",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync start --server --files '*.html, css/*.css'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukassso/js30.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukassso/js30/issues"
+  },
+  "homepage": "https://github.com/lukassso/js30#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7"
+  }
+}
