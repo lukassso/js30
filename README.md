@@ -10,3 +10,15 @@
 12/11/19 React components trainign
 # day 5
 12/12/19 Array methods challange
+# lesson 6
+panels with pictures gallery (using flex)
+# lesson 7
+I trained type-ahead search with ajax
+# lesson 8 
+Array part 2
+# lesson 9
+I usage Twilio SMS, API. I received text massages using node.js and Twilio Studio
+# lesson 10
+
+# lesson 11
+In this case I will look at asynchronous JavaScript and cover callbacks, promises including promise.all as well as the async / await syntax.
