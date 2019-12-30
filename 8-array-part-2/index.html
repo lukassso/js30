@@ -70,7 +70,7 @@
     const index = comments.findIndex(comment => comment.id === 823423);
     console.log(index);
 
-    comment.splice(index, 1);
+    comments.splice(index, 1);
 
     const newComments = [
         ...comments.slice(0, index),
@@ -78,6 +78,50 @@
     ];
     console.table(newComments);
 
+
+    class Table {
+      constructor(table) {
+          this.table = table;
+      }
+      //forEach
+      foreachTable(callback) {
+          for (let i = 0; i < this.table.length; i++) {
+              callback(this.table[i], i, this.table);
+          }
+      }
+      //map
+      mapTable(callback) {
+          const newArray = [];
+          for (let i = 0; i < this.table.length; i++) {
+              const newElement = callback(this.table[i], i, this.table);
+              newArray.push(newElement);
+          }
+          return newArray;
+      }
+      //filter
+      filterTable(callback) {
+          const newArray = [];
+          for (let i = 0; i < this.table.length; i++) {
+              const condition = callback(this.table[i], i, this.table);
+              if (condition) {
+                  newArray.push(this.table[i]);
+              }
+          }
+          return newArray;
+      }
+    }
+
+    const table = new Table(['jeden', 'dwa', 'trzy']);
+    
+    table.foreachTable((el, index, arr) => {
+        console.log(el, index, arr);
+    })
+
+    const mapArray = table.mapTable((el) => el + 'Next');
+    console.log(mapArray);
+
+    const filteredArray = table.filterTable((el) => el.length > 4);
+    console.log(filteredArray);
 
   </script>
 </body>
