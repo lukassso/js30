@@ -1,0 +1,58 @@
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: #eee;
+  padding: 30px;
+  margin: 150px auto;
+  width: 80vw;
+}
+
+form h1 {
+  font-size: 40px;
+  display: block;
+  margin: 20px auto;
+  color: #0f0f0f;
+}
+
+form button {
+  margin-top: 50px;
+  background-color: #55ff99;
+  border: none;
+  padding: 20px;
+  font-size: 30px;
+  color: #0f0f0f;
+}
+
+form button:hover {
+  cursor: pointer;
+}
+
+form button:focus {
+  outline: none;
+}
+#question {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #0f0f0f;
+  resize: none;
+  font-size: 20px;
+  color: #0f0f0f;
+  outline: none;
+}
+
+.error-msg {
+  display: black;
+  text-align: center;
+  color: red;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.ok-msg {
+  display: block;
+  text-align: center;
+  color: #00ff00;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
